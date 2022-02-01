@@ -1,7 +1,7 @@
 const close = document.querySelector('.close');
 
 export default function renderPopUp(data) {
-  // console.log('POP ', data);
+  // console.log('hello');
 }
 
 close.addEventListener('click', () => {
