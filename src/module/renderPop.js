@@ -16,7 +16,6 @@ function popUpToggle(id) {
 }
 
 export default function renderPopUp(data) {
-  console.log(data);
   const moves = data.moves['0'].move.name;
   const { weight } = data;
   const { height } = data;
