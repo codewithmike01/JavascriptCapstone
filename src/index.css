@@ -19,21 +19,20 @@ body {
 }
 
 footer {
-  display: flex;
-  border: 3px solid black;
   margin: 1rem;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem;
-  position: fixed;
   bottom: 0;
   width: 98%;
+}
+
+footer h4 {
+  text-align: center;
 }
 
 .navigation-bar ul {
   list-style: none;
   display: flex;
-  font-size: 13px;
+  font-size: 18px;
   padding-left: 0;
 }
 
@@ -49,7 +48,7 @@ footer {
 }
 
 .navigation-bar h2 {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .navigation-bar ul li:nth-last-child(3) a {
@@ -60,7 +59,7 @@ footer {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #f3f7f359;
-  margin: 6% 20% 6% 20%;
+  margin: 2% 20% 2% 20%;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
