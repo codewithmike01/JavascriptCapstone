@@ -219,3 +219,14 @@ textarea {
 .isDisable {
   pointer-events: none;
 }
+
+.btn-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.red-alert {
+  color: red;
+  font-size: 1.2em;
+}
