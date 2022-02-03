@@ -84,6 +84,7 @@ footer h4 {
 
 .space-item i {
   font-size: 14px;
+  cursor: pointer;
 }
 
 .btn {
@@ -218,4 +219,18 @@ textarea {
 
 .isDisable {
   pointer-events: none;
+}
+
+span {
+  font-size: 12px;
+  color: red;
+}
+
+.span-items {
+  display: flex;
+  gap: 3px;
+}
+
+.span-items p {
+  font-size: 12px;
 }

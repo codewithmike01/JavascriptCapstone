@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --open",
     "build": "webpack --config webpack.config.js",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
-    "pokemon-images": "^2.0.1"
+    "pokemon-images": "^2.0.1",
+    "gh-pages": "^3.2.3"
   }
 }
