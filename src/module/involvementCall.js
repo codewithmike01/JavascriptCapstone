@@ -1,6 +1,7 @@
 // ID FOR API Jn2Mh8nYExszQ1ziounn
-import renderPopUp, { popUps, buttonStruct } from './renderPop.js';
-import callPoke from './pokeCall.js';
+// eslint-disable-next-line import/no-cycle
+import { popUps, buttonStruct } from './renderPop.js';
+import commentCount from './commentCount.js';
 
 function alertErr(p) {
   p.innerText = 'No value entered';
@@ -54,23 +55,20 @@ async function postInvolveCommentApi(id, name, userComment) {
   return data;
 }
 
-function commentCount(comment) {
-  const count = comment.querySelectorAll('li');
-  const head = comment.parentNode.querySelector('.comment-head');
-  head.innerText = `Comments (${count.length})`;
-}
-
 function appendElement(parentComment, name, msgText) {
   parentComment.innerHtml = '';
   const date = new Date();
-  let month = date.getMonth();
+  let month = 1 + date.getMonth();
   let day = date.getDate();
   day = day < 10 ? `0${day}` : day;
   month = month < 10 ? `0${month}` : month;
   const li = document.createElement('li');
   li.innerText = `${date.getFullYear()}-${month}-${day}  ${name}: ${msgText}`;
   parentComment.appendChild(li);
-  commentCount(parentComment);
+  const comment = parentComment.querySelectorAll('li');
+  const count = commentCount(comment);
+  const head = parentComment.parentNode.querySelector('.comment-head');
+  head.innerText = `Comments (${count})`;
 }
 
 function getForm(item) {
@@ -78,7 +76,6 @@ function getForm(item) {
   const form = item.querySelector('form');
   const p = item.querySelector('.red-alert');
   const comment = item.querySelector('.comments-info');
-  console.log(comment);
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const inputValue = form.querySelector('.input-name');
