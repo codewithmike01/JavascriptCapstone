@@ -12,6 +12,7 @@ function alertErr(p) {
 
 export default async function getpostInvolveCommentApi(id) {
   const response = await fetch(
+    // eslint-disable-next-line comma-dangle
     `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Jn2Mh8nYExszQ1ziounn/comments?item_id=${id}`
   );
   const data = await response.json();
@@ -84,6 +85,7 @@ function getForm(item) {
       postInvolveCommentApi(
         id,
         inputValue.value.trim(),
+        // eslint-disable-next-line comma-dangle
         textValue.value.trim()
       );
     } else {

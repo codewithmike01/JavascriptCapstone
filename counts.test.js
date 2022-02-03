@@ -3,6 +3,7 @@
  */
 
 import commentCount from './src/module/commentCount.js';
+
 document.body.innerHTML = `<header>
 <nav class="navigation-bar">
   <h2>KanBan Board</h2>

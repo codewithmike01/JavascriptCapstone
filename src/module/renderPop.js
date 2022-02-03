@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import getpostInvolveCommentApi from './involvementCall.js';
+
 export const popUps = document.querySelector('.pop-ups');
 export const buttonStruct = document.querySelector('.grid-container');
 const gridItem = document.querySelector('.grid-container');
