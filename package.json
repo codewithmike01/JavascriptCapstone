@@ -1,5 +1,5 @@
 {
-  "name": "todolist-with-webpack",
+  "name": "JavascriptCapstone",
   "version": "1.0.0",
   "description": "Using Webpack in the development of a Todo list",
   "main": "index.js",

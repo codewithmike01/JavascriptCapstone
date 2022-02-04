@@ -1,5 +1,8 @@
-const popUps = document.querySelector('.pop-ups');
-const buttonStruct = document.querySelector('.grid-container');
+// eslint-disable-next-line import/no-cycle
+import getpostInvolveCommentApi from './involvementCall.js';
+
+export const popUps = document.querySelector('.pop-ups');
+export const buttonStruct = document.querySelector('.grid-container');
 const gridItem = document.querySelector('.grid-container');
 let popCards = '';
 
@@ -15,7 +18,7 @@ function popUpToggle(id) {
   });
 }
 
-export default function renderPopUp(data) {
+export default async function renderPopUp(data) {
   const moves = data.moves['0'].move.name;
   const { weight } = data;
   const { height } = data;
@@ -23,6 +26,7 @@ export default function renderPopUp(data) {
   const { name } = data;
   const { id } = data;
   const img = data.sprites.other['official-artwork'].front_default;
+  const comment = await getpostInvolveCommentApi(id);
 
   popCards += ` <div class="popup-info hide" id='${id}'>
   <div class="image">
@@ -44,24 +48,26 @@ export default function renderPopUp(data) {
   </div>
 
   <div class="comments">
-    <h4>Comments (2)</h4>
+    <h4 class='comment-head'>Comments (${comment[0].count})</h4>
     <ul class="comments-info">
-      <li><span class="time">03/11/2021 </span> Alex: I'd love to buy</li>
-      <li><span class="time">03/11/2021 </span> Mia: I love</li>
+     ${comment[0].show}
     </ul>
   </div>
 
   <form action="#">
     <label for="form Add comment"> <h5>Add a comment</h5></label>
-    <input type="text" placeholder="Your name" />
+    <input type="text" placeholder="Your name" class="input-name" required/>
     <textarea
       name="comment-text"
       id="text"
       cols="30"
       rows="7"
       placeholder="Your insight"
-    ></textarea>
-    <button class="btn">Comment</button>
+    class="msg" required></textarea>
+    <div class="btn-layout">
+    <button type="submit" class="btn">Comment</button>
+    <p class="red-alert"></p>
+    </div>
   </form>
 </div>`;
 

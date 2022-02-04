@@ -1,13 +1,15 @@
+import itemsCounter from './counter.js';
+
+const container = document.querySelector('.grid-container');
 const url =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FmntFuxK5T09jvOkFrA6/likes';
 
 const postLikes = async (id) => {
+  const userLikes = { item_id: id };
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      item_id: id,
-    }),
+    body: JSON.stringify(userLikes),
   });
   return response;
 };
@@ -19,28 +21,35 @@ const getLikes = async () => {
 };
 
 const updatLikes = async (id) => {
-  console.log(id);
   const likesData = await getLikes();
   let results = 0;
   likesData.forEach((element) => {
-    console.log(id);
-    if (element.item_id === id) {
-      element.likes += 1;
+    if (element.item_id == id) {
       results = element.likes;
-      console.log('hello');
     }
   });
   return results;
 };
 
-const container = document.querySelector('.grid-container');
+const addElements = (e) => {
+  const currentNumber = e.innerText;
+  e.innerText = parseInt(currentNumber, 10) + 1;
+};
+
+export const displayCounts = (countData) => {
+  const counts = document.querySelector('.active');
+  counts.innerText = `Pokemons (${countData})`;
+};
+
 container.addEventListener('click', (e) => {
   if (e.target.className === 'far fa-heart likes') {
-    const targetEl = e.target;
-    const likesId = targetEl.parentNode.querySelector('span').id;
-
+    const targetElement = e.target;
+    const likesId = targetElement.parentNode.querySelector('span').id;
+    const likeL = targetElement.parentNode.querySelector('span');
     postLikes(likesId);
     updatLikes(likesId);
+    addElements(likeL);
   }
 });
+
 export default updatLikes;
