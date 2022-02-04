@@ -1,6 +1,6 @@
-import itemsCounter from './counter.js';
-
 const container = document.querySelector('.grid-container');
+
+// eslint-disable-next-line operator-linebreak
 const url =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FmntFuxK5T09jvOkFrA6/likes';
 
@@ -24,7 +24,7 @@ const updatLikes = async (id) => {
   const likesData = await getLikes();
   let results = 0;
   likesData.forEach((element) => {
-    if (element.item_id == id) {
+    if (element.item_id.toString() === id.toString()) {
       results = element.likes;
     }
   });

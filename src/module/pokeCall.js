@@ -1,5 +1,5 @@
-import renderPopUp from './renderPop';
-import renderStructure from './renderStruc';
+import renderPopUp from './renderPop.js';
+import renderStructure from './renderStruc.js';
 
 export async function getDetail(dataGet) {
   dataGet = dataGet.results;

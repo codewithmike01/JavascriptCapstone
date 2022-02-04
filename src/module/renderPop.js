@@ -13,7 +13,7 @@ function popUpToggle(id) {
     if (id === item.id) {
       popUps.classList.toggle('hide');
       item.classList.toggle('hide');
-      gridItem.classList.toggle('isDisable');
+      gridItem.classList.toggle('is-disable');
     }
   });
 }
@@ -89,6 +89,6 @@ popUps.addEventListener('click', (event) => {
     const parentHit = event.target.parentNode.parentNode;
     popUps.classList.toggle('hide');
     parentHit.classList.toggle('hide');
-    gridItem.classList.toggle('isDisable');
+    gridItem.classList.toggle('is-disable');
   }
 });

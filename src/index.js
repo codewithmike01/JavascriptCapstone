@@ -9,7 +9,6 @@ async function Stater() {
   const data = await callPoke();
   const itemsCount = itemsCounter(data.results);
   displayCounts(itemsCount);
-
   await getDetail(data);
   await renderStructure(data);
 }

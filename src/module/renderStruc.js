@@ -1,4 +1,4 @@
-import updatLikes, { itemsCounter } from './addLikes.js';
+import updatLikes from './addLikes.js';
 
 const renderStructure = async (data) => {
   const { name } = data;
@@ -18,7 +18,6 @@ const renderStructure = async (data) => {
     </div>
     <button type="button" class="btn">Comments</button>
   </div>`;
-  // if (data.length ===20)
 };
 
 export default renderStructure;
