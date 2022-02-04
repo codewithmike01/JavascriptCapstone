@@ -1,7 +1,8 @@
 # Javascript Capstone
 
 > This project makes use of Poke Api and involemnet Api to get pokemon informations to be rendered on the screen and to store and retrive userslikes and comments respectively.
-
+<br><br>
+![ScreenShoot](https://github.com/Ginohmk/JavascriptCapstone/blob/Finalization-merge/src/assets/javscriptCapstoneImage.png)
 ## Built With
 
 - Html
