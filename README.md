@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-Click [Live Demo Link]
+Click [Live Demo Link](https://ginohmk.github.io/JavascriptCapstone/)
 
 ## Video Link
 
