@@ -16,7 +16,7 @@ Click [Live Demo Link](https://ginohmk.github.io/JavascriptCapstone/)
 
 ## Video Link
 
-Click [Video Link]
+Click [Video Link](https://drive.google.com/file/d/1d4sOvTFcDihFuNLwO2onU09QQl6Pz5mJ/view?usp=sharing)
 
 ## Getting Started
 
