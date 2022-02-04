@@ -8,6 +8,7 @@
 - Css
 - Javascript
 - Webpack
+- Jest
 
 ## Live Demo
 
