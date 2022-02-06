@@ -1,6 +1,6 @@
 # Javascript Capstone
 
-> This project makes use of Poke Api and involemnet Api to get pokemon informations to be rendered on the screen and to store and retrive userslikes and comments respectively.
+>This project is developed for Pokemon and fight game  lovers to see their favorite Pokemon character and make comments on them. This project makes use of Poke API and involvement API to get Pokemon information to be rendered on the screen and to store and retrieve users likes and comments respectively. 
 <br><br>
 ![ScreenShoot](https://github.com/Ginohmk/JavascriptCapstone/blob/Finalization-merge/src/assets/javscriptCapstoneImage.png)
 ## Built With
